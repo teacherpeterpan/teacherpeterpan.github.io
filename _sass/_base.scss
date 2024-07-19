@@ -389,6 +389,29 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This will space out the icons evenly */
+    align-items: left;
+    text-align: left;
+    width: 65%;
+    list-style: none;
+  }
+
+  // .column-icon {
+  //   width: 10%; /* Keeps your original styling for larger screens */
+  //   text-align: center; /* Centers the icons within each column */
+  //   display: inline-block; /* Allows columns to be in line and size-adjustable */
+  // }
+
+  // /* Responsive design for smaller screens */
+  // @media (max-width: 768px) {
+  //   .column {
+  //       width: 20%; /* Increase width per column on smaller screens */
+  //   }
+  // }
+
   .cv-icon {
     display: inline-block;
     width: 50px;       /* Width of the icon */
