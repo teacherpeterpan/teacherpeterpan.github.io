@@ -2,45 +2,68 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
+  <div id="profile">
+    <div class="row">
+      <!-- The profile image -->
+      <div class="column" style="width: 40%">
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        
-        <!-- Social -->
-        {% if page.social %}
-          <div class="social">
-            <div class="contact-icons">{% include social.liquid %}</div>
-
-            <div class="contact-note">{{ site.contact_note }}</div>
+          <div style="text-align: center;">
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class width="50%" alt=page.profile.image
+            cache_bust=true %}
           </div>
-        {% endif %}
+      </div>
+      <!-- The profile information -->
+      <div class="column-long" style="width: 60%">
+        <div class="blank"></div>
+        <h2 class="post-title"><span class="font-weight-bold">{{ site.first_name }} {{ site.middle_name }}
+        {{ site.last_name }}</span> <span style='font-size: 70%'>({{ site.chinese_name }})</span></h2>
+        <h5><span style='font-size: 90%'>{{ site.position }}</span></h5>
+        <h5><span style='font-size: 90%'>{{ site.department }}</span></h5>
+        <h5><span style='font-size: 90%'>{{ site.institution }}</span></h5>
+        <div class="blank"></div>
+
+        <!-- Social -->
+        <div class="social">
+          <div class="contact-icons">
+            <div class="row">
+              <div class="column column-22" style="width: 10%">
+                <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fa-solid fa-envelope-open-text fa-xs"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fa-brands fa-github fa-sm"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin fa-sm"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter fa-sm"></i></a>
+              </div>
+              <div class="column column-22" style="width: 10%">
+                <a href="assets/pdf/LiangmingPan_CV_20240204.pdf" target="_blank" title="CV"><i class="fa-solid fa-file-pdf fa-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
       </div>
     {% endif %}
 

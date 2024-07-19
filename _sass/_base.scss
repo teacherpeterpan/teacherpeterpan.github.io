@@ -373,7 +373,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3rem;
 
     a {
       i::before {
@@ -387,6 +387,15 @@ ul.task-list input[type="checkbox"] {
         }
       }
     }
+  }
+
+  .cv-icon {
+    display: inline-block;
+    width: 50px;       /* Width of the icon */
+    height: 50px;      /* Height of the icon */
+    background-image: url('../icons/cv.jpg'); /* Path to your JPEG image */
+    background-size: cover;   /* Resize the background image to cover the entire element */
+    background-position: center; /* Center the background image */
   }
 
   .contact-note {

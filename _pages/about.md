@@ -6,16 +6,15 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: left
-  image: avatar.jpg
+  image: avatar2.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
     <p>123 your address street</p>
     <p>Your City, State 12345</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
 
 Liangming Pan (潘亮铭) is a **Postdoctoral Scholar** at the [Natural Language Processing Group][UCSB], [University of California, Santa Barbara (UCSB)][UCSBSchool], working with Prof. [William Yang Wang][William]. He obtained his Ph.D. from the [National University of Singapore][NUS] in Jan 2022, jointly advised by Prof. [Min-Yen Kan][Min] and Prof. [Tat-Seng Chua][Chua]. Before joining NUS, he received Master's degree from the School of Computer Science at Tsinghua University in June 2017, working with Prof. [Juanzi Li][juanzili] and Prof. [Jie Tang][jietang]. He obtained his Bachelor's degree from Beihang University (2010 - 2014). He was a visiting Ph.D. student from 2020 to 2021, supervised by Prof. [William Yang Wang][William]. 
