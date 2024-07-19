@@ -5,9 +5,9 @@ permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
     <p>123 your address street</p>
@@ -18,8 +18,23 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Liangming Pan (潘亮铭) is a **Postdoctoral Scholar** at the [Natural Language Processing Group][UCSB], [University of California, Santa Barbara (UCSB)][UCSBSchool], working with Prof. [William Yang Wang][William]. He obtained his Ph.D. from the [National University of Singapore][NUS] in Jan 2022, jointly advised by Prof. [Min-Yen Kan][Min] and Prof. [Tat-Seng Chua][Chua]. Before joining NUS, he received Master's degree from the School of Computer Science at Tsinghua University in June 2017, working with Prof. [Juanzi Li][juanzili] and Prof. [Jie Tang][jietang]. He obtained his Bachelor's degree from Beihang University (2010 - 2014). He was a visiting Ph.D. student from 2020 to 2021, supervised by Prof. [William Yang Wang][William]. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+His broad research interests include natural language processing, machine learning, and data mining. 
+To be specific, his research topics include **Trustworthy Large Language Models**, **Neuro-Symbolic Reasoning**, **Question Answering**, and **Automated Fact Checking**. 
+<!-- *multi-media structure learning of food recipes*.  -->
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+[NGS]: https://www.nus.edu.sg/ngs/
+[Tsinghua]: https://www.tsinghua.edu.cn/publish/newthu/index.html
+[juanzili]: https://keg.cs.tsinghua.edu.cn/persons/ljz/
+[jietang]: https://keg.cs.tsinghua.edu.cn/jietang/
+[BUAA]: https://www.buaa.edu.cn/
+[SOC]: https://www.comp.nus.edu.sg/
+[NUS]: https://www.nus.edu.sg/
+[Chua]: https://www.comp.nus.edu.sg/~chuats/
+[NExT]: https://next.comp.nus.edu.sg/
+[Min]: https://www.comp.nus.edu.sg/~kanmy/
+[WING]: https://wing.comp.nus.edu.sg/
+[UCSB]: https://nlp.cs.ucsb.edu/
+[William]: https://sites.cs.ucsb.edu/~william/
+[UCSBSchool]: https://www.ucsb.edu/
