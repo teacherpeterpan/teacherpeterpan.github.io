@@ -2,26 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
 profile:
   align: left
   image: avatar2.jpg
   image_circular: true # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-news: false # includes a list of news items
+news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
+Hey, thanks for stopping by! 👋
 
-Liangming Pan (潘亮铭) is a **Postdoctoral Scholar** at the [Natural Language Processing Group][UCSB], [University of California, Santa Barbara (UCSB)][UCSBSchool], working with Prof. [William Yang Wang][William]. He obtained his Ph.D. from the [National University of Singapore][NUS] in Jan 2022, jointly advised by Prof. [Min-Yen Kan][Min] and Prof. [Tat-Seng Chua][Chua]. Before joining NUS, he received Master's degree from the School of Computer Science at Tsinghua University in June 2017, working with Prof. [Juanzi Li][juanzili] and Prof. [Jie Tang][jietang]. He obtained his Bachelor's degree from Beihang University (2010 - 2014). He was a visiting Ph.D. student from 2020 to 2021, supervised by Prof. [William Yang Wang][William]. 
+I am a **Postdoctoral Scholar** at the [Natural Language Processing Group][UCSB], [University of California, Santa Barbara (UCSB)][UCSBSchool]. I am fortunate to be advised by Prof. [William Yang Wang][William]. I completed my PhD from [National University of Singapore][NUS] in 2022, where I was advised by Prof. [Min-Yen Kan][Min] and Prof. [Tat-Seng Chua][Chua] and worked on complex question answering and generation. Previously, I received my Master's degree from [Tsinghua University][Tsinghua] (2014 - 2017, advised by Prof. [Juanzi Li][juanzili] and Prof. [Jie Tang][jietang]) and my Bachelor's degree from [Beihang University][BUAA] (2010 - 2014). 
 
-His broad research interests include natural language processing, machine learning, and data mining. 
-To be specific, his research topics include **Trustworthy Large Language Models**, **Neuro-Symbolic Reasoning**, **Question Answering**, and **Automated Fact Checking**. 
-<!-- *multi-media structure learning of food recipes*.  -->
+My primary research lies in the area of **natural language processing and machine learning**. The overarching goal of my research is: *how to build trustworthy large language models that are logical, truthful, and safe.* Specifically: 
+- <i class="fa-solid fa-flask"></i> **Reasoning**: How/why can LLMs consistently perform logical and faithful reasoning?
+- <i class="fas fa-search"></i> **Truthfulness**: How can LLMs produce accurate, un-biased, and up-to-date information?
+- <i class="fas fa-shield-alt"></i> **Safety**: How can we discover and mitigate the potential harm caused by LLMs?
 
 [NGS]: https://www.nus.edu.sg/ngs/
 [Tsinghua]: https://www.tsinghua.edu.cn/publish/newthu/index.html

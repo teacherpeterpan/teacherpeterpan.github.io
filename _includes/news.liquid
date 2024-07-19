@@ -3,8 +3,8 @@
     {% assign news_size = site.news | size %}
     <div
       class="table-responsive"
-      {% if include.limit and site.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+      {% if site.announcements.scrollable and news_size > 10 %}
+        style="max-height: 25em;"
       {% endif %}
     >
       <table class="table table-sm table-borderless">
@@ -16,7 +16,12 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            {% comment %} <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th> {% endcomment %}
+            <th scope="row" style="width: 15%">  
+              <span class="badge light-blue darken-1 font-weight-bold text-uppercase align-middle date ml-3" style="font-size: 90%">
+                &nbsp; {{ item.date | date: '%b, %Y' }} &nbsp;
+              </span>
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
