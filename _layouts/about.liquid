@@ -37,7 +37,7 @@ layout: default
             <div style="width:1em;text-align:center"><a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fa-brands fa-github fa-sm"></i></a></div>
             <div style="width:1em;text-align:center"><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin fa-sm"></i></a></div>
             <div style="width:1em;text-align:center"><a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter fa-sm"></i></a></div>
-            <div style="width:1em;text-align:center"><a href="assets/pdf/LiangmingPan_CV_20240204.pdf" target="_blank" title="CV"><i class="fa-solid fa-file-pdf fa-xs"></i></a></div>
+            <div style="width:1em;text-align:center"><a href="assets/pdf/LiangmingPan_CV_20240204.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a></div>
           </div> <!-- end of contact-icons -->
         </div> <!-- end of social -->
       </div> <!-- end of column-long -->
@@ -65,9 +65,11 @@ layout: default
     {% endif %}
 
     <!-- Selected papers -->
+    <br/>
+    <hr class="segmentation-line">
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

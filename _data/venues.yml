@@ -2,8 +2,23 @@
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"TACL":
+  # url: https://direct.mit.edu/tacl
+  # color: "#009f36"
+  color: "#0076df"
 
-"Vision":
-  color: "#009f36"
+"EMNLP":
+  # color: "#0076df"
+  color: "#0076df"
+
+"ACL":
+  # color: "red"
+  color: "#0076df"
+
+"arXiv":
+  # color: "#818589"
+  color: "#0076df"
+
+"PhD thesis":
+  # color: "purple"
+  color: "#0076df"
