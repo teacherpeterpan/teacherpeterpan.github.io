@@ -1,11 +1,12 @@
 ---
 layout: cv
-permalink: /cv/
-title: cv
-nav: false
-nav_order: 5
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+permalink: /bio/
+title: Bio
+page_title: Background
+nav: true
+nav_order: 2
+cv_pdf: LiangmingPan_CV_20240204.pdf
+description: You can find a PDF version of my full CV on the right.
 toc:
-  sidebar: left
+  sidebar:
 ---

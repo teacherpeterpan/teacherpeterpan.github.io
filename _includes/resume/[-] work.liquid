@@ -1,6 +1,6 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-  {% assign education = data[1] | sort: 'startDate' | reverse %}
-  {% for content in education %}
+  {% assign work = data[1] | sort: 'startDate' | reverse %}
+  {% for content in work %}
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-3 cl-sm-4 col-md-3 text-center date-column">
@@ -12,11 +12,11 @@
           {% else %}
             {% assign date = '' %}
           {% endif %}
-          <table class="table-cv" style="margin-left: 2rem;">
+          <table class="table-cv">
             <tbody>
               <tr>
                 <td>
-                  <span class="badge font-weight-bold danger-color-dark align-middle" style="width:150px; min-width: 75px;font-size: 0.85rem"> {{ date }} </span>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="width:150px; min-width: 75px;font-size: 0.85rem"> {{ date }} </span>
                 </td>
               </tr>
               {% if content.icon %}

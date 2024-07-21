@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: Home
 permalink: /
 subtitle:
 
@@ -35,3 +35,14 @@ My primary research lies in the area of **natural language processing and machin
 [UCSB]: https://nlp.cs.ucsb.edu/
 [William]: https://sites.cs.ucsb.edu/~william/
 [UCSBSchool]: https://www.ucsb.edu/
+
+<!-- Announcement color: #0076df; I am hiring!-->
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title" style="color: #0076df; bold;">📢 Annoncement</h5>
+    <p class="card-text" style="font-size: 1em;">
+    I am looking for highly motivated Ph.D./master/undergraduate students to work with me on exciting research projects related to large language models. If you are interested in working with me, please feel free to reach out to me via email.
+    </p>
+    <!-- <a href="/research/" class="btn btn-primary">Learn more</a> -->
+  </div>
+</div>
