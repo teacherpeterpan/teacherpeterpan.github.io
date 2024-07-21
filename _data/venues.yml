@@ -15,6 +15,12 @@
   # color: "red"
   color: "#0076df"
 
+"NAACL":
+  color: "#0076df"
+
+"ICML":
+  color: "#0076df"
+
 "arXiv":
   # color: "#818589"
   color: "#0076df"

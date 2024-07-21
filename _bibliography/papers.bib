@@ -5,6 +5,8 @@
 @string{emnlp = {Conference on Empirical Methods in Natural Language Processing (EMNLP)}}
 @string{acl = {Annual Meeting of the Association for Computational Linguistics (ACL)}}
 @string{emnlpfindings = {Findings of Conference on Empirical Methods in Natural Language Processing (EMNLP)}}
+@string{aclfindings = {Findings of Annual Meeting of the Association for Computational Linguistics (ACL)}}
+@string{icml = {International Conference on Machine Learning (ICML)}}
 
 @misc{ma2024mmlongbenchdocbenchmarkinglongcontextdocument,
     abbr = {arXiv},
@@ -140,7 +142,7 @@
     url = "https://arxiv.org/abs/2405.18357"
 }
 
-@inproceedings{xu-etal-2024-faithful,
+@inproceedings{xu-etal-2024-pride,
     abbr = {ACL},
     google_scholar_id={3s1wT3WcHBgC},
     code={https://github.com/xu1998hz/llm_self_bias},
@@ -161,6 +163,97 @@
     address = "Thailand",
     publisher = "Association for Computational Linguistics",
     url = "https://arxiv.org/abs/2402.11436"
+}
+
+@inproceedings{alfonso-etal-2024-knowledge,
+    abbr = {ACL},
+    code={https://github.com/amayuelas/knowledge-of-knowledge},
+    google_scholar_id={TQgYirikUcIC},
+    pdf={https://arxiv.org/abs/2305.13712},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "This paper investigates the capabilities of Large Language Models (LLMs) in the context of understanding their knowledge and uncertainty over questions. Specifically, we focus on addressing known-unknown questions, characterized by high uncertainty due to the absence of definitive answers. To facilitate our study, we collect a new dataset with Known-Unknown Questions (KUQ) and establish a categorization framework to clarify the origins of uncertainty in such queries. Subsequently, we examine the performance of open-source LLMs, fine-tuned using this dataset, in distinguishing between known and unknown queries within open-ended question-answering scenarios. The fine-tuned models demonstrated a significant improvement, achieving a considerable increase in F1-score relative to their pre-fine-tuning state. Through a comprehensive analysis, we reveal insights into the models' improved uncertainty articulation and their consequent efficacy in multi-agent debates. These findings help us understand how LLMs can be trained to identify and express uncertainty, improving our knowledge of how they understand and express complex or unclear information.",
+    title = "Knowledge of Knowledge: Exploring Known-Unknowns Uncertainty with Large Language Models",
+    author={Alfonso Amayuelas and Kyle Wong and Liangming Pan and Wenhu Chen and William Yang Wang},
+    booktitle = aclfindings,
+    year = "2024",
+    address = "Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2305.13712"
+}
+
+@inproceedings{zhang-etal-2024-knowledge,
+    abbr = {ACL},
+    code={https://github.com/shuozhangxjtu/mixalign},
+    google_scholar_id={M05iB0D1s5AC},
+    pdf={https://arxiv.org/abs/2305.13669},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Large language models often necessitate grounding on external knowledge to generate faithful and reliable answers. Yet even with the correct groundings in the reference, they can ignore them and rely on wrong groundings or their inherent biases to hallucinate when users, being largely unaware of the specifics of the stored information, pose questions that might not directly correlate with the retrieved groundings. In this work, we formulate this knowledge alignment problem and introduce MixAlign, a framework that interacts with both the human user and the knowledge base to obtain and integrate clarifications on how the user question relates to the stored information. MixAlign employs a language model to achieve automatic knowledge alignment and, if necessary, further enhances this alignment through human user clarifications. Experimental results highlight the crucial role of knowledge alignment in boosting model performance and mitigating hallucination, with improvements noted up to 22.2% and 27.1% respectively. We also demonstrate the effectiveness of MixAlign in improving knowledge alignment by producing high-quality, user-centered clarifications.",
+    title = "The Knowledge Alignment Problem: Bridging Human and External Knowledge for Large Language Models",
+    author={Shuo Zhang and Liangming Pan and Junzhou Zhao and William Yang Wang},
+    booktitle = aclfindings,
+    year = "2024",
+    address = "Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2305.13669"
+}
+
+@inproceedings{li-etal-2024-towards,
+    abbr = {ACL},
+    pdf={https://arxiv.org/abs/2310.05634},
+    bibtex_show = {true},
+    abstract = "Although achieving great success, Large Language Models (LLMs) usually suffer from unreliable hallucinations. Although language attribution can be a potential solution, there are no suitable benchmarks and evaluation metrics to attribute LLMs to structured knowledge. In this paper, we define a new task of Knowledge-aware Language Model Attribution (KaLMA) that improves upon three core concerns with conventional attributed LMs. First, we extend attribution source from unstructured texts to Knowledge Graph (KG), whose rich structures benefit both the attribution performance and working scenarios. Second, we propose a new ``Conscious Incompetence'' setting considering the incomplete knowledge repository, where the model identifies the need for supporting knowledge beyond the provided KG. Third, we propose a comprehensive automatic evaluation metric encompassing text quality, citation quality, and text citation alignment. To implement the above innovations, we build a dataset in biography domain BioKaLMA via evolutionary question generation strategy, to control the question complexity and necessary knowledge to the answer. For evaluation, we develop a baseline solution and demonstrate the room for improvement in LLMs' citation generation, emphasizing the importance of incorporating the ``Conscious Incompetence'' setting, and the critical role of retrieval accuracy.",
+    title = "Towards Verifiable Generation: A Benchmark for Knowledge-aware Language Model Attribution",
+    author={Xinze Li and Yixin Cao and Liangming Pan and Yubo Ma and Aixin Sun},
+    booktitle = aclfindings,
+    year = "2024",
+    address = "Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2310.05634"
+}
+
+@inproceedings{wu-etal-2024-modeling,
+    abbr = {ACL},
+    code={https://github.com/bobxwu/CFDTM},
+    pdf={https://arxiv.org/abs/2405.17957},
+    bibtex_show = {true},
+    abstract = "Dynamic topic models track the evolution of topics in sequential documents, which have derived various applications like trend analysis and opinion mining. However, existing models suffer from repetitive topic and unassociated topic issues, failing to reveal the evolution and hindering further applications. To address these issues, we break the tradition of simply chaining topics in existing work and propose a novel neural \modelfullname. We introduce a new evolution-tracking contrastive learning method that builds the similarity relations among dynamic topics. This not only tracks topic evolution but also maintains topic diversity, mitigating the repetitive topic issue. To avoid unassociated topics, we further present an unassociated word exclusion method that consistently excludes unassociated words from discovered topics. Extensive experiments demonstrate our model significantly outperforms state-of-the-art baselines, tracking topic evolution with high-quality topics, showing better performance on downstream tasks, and remaining robust to the hyperparameter for evolution intensities.",
+    title = "Modeling Dynamic Topics in Chain-Free Fashion by Evolution-Tracking Contrastive Learning and Unassociated Word Exclusion",
+    author={Xiaobao Wu and Xinshuai Dong and Liangming Pan and Thong Nguyen and Anh Tuan Luu},
+    booktitle = aclfindings,
+    year = "2024",
+    address = "Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2405.17957"
+}
+
+@inproceedings{wang-etal-2024-understanding,
+    abbr = {ICML},
+    code={https://github.com/wangxinyilinda/lm_random_walk},
+    pdf={https://arxiv.org/abs/2402.03268},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Pre-trained language models (LMs) are able to perform complex reasoning without explicit fine-tuning. To understand how pre-training with a next-token prediction objective contributes to the emergence of such reasoning capability, we propose that we can view an LM as deriving new conclusions by aggregating indirect reasoning paths seen at pre-training time. We found this perspective effective in two important cases of reasoning: logic reasoning with knowledge graphs (KGs) and chain-of-thought (CoT) reasoning. More specifically, we formalize the reasoning paths as random walk paths on the knowledge/reasoning graphs. Analyses of learned LM distributions suggest that a weighted sum of relevant random walk path probabilities is a reasonable way to explain how LMs reason. Experiments and analysis on multiple KG and CoT datasets reveal the effect of training on random walk paths and suggest that augmenting unlabeled random walk reasoning paths can improve real-world multi-step reasoning performance.",
+    title = "Understanding Reasoning Ability of Language Models From the Perspective of Reasoning Paths Aggregation",
+    author={Xinyi Wang and Alfonso Amayuelas and Kexun Zhang and Liangming Pan and Wenhu Chen and William Yang Wang},
+    booktitle = icml,
+    year = "2024",
+    address = "Austria",
+    url = "https://arxiv.org/abs/2402.03268"
+}
+
+@inproceedings{weissburg-etal-2024-tweets,
+    abbr = {ICML},
+    pdf={https://arxiv.org/abs/2401.13782},
+    bibtex_show = {true},
+    abstract = "As the number of accepted papers at AI and ML conferences reaches into the thousands, it has become unclear how researchers access and read research publications. In this paper, we investigate the role of social media influencers in enhancing the visibility of machine learning research, particularly the citation counts of papers they share. We have compiled a comprehensive dataset of over 8,000 papers, spanning tweets from December 2018 to October 2023, alongside controls precisely matched by 9 key covariates. Our statistical and causal inference analysis reveals a significant increase in citations for papers endorsed by these influencers, with median citation counts 2-3 times higher than those of the control group. Additionally, the study delves into the geographic, gender, and institutional diversity of highlighted authors. Given these findings, we advocate for a responsible approach to curation, encouraging influencers to uphold the journalistic standard that includes showcasing diverse research topics, authors, and institutions.",
+    title = "Tweets to Citations: Unveiling the Impact of Social Media Influencers on AI Research Visibility",
+    author={Iain Xie Weissburg and Mehir Arora and Xinyi Wang and Liangming Pan and William Yang Wang},
+    booktitle = icml,
+    year = "2024",
+    address = "Austria",
+    url = "https://arxiv.org/abs/2401.13782"
 }
 
 @inproceedings{pan-etal-2023-logic,
@@ -215,6 +308,7 @@
     pdf={https://arxiv.org/abs/2305.13186},
     abstract = "Current scientific fact-checking benchmarks exhibit several shortcomings, such as biases arising from crowd-sourced claims and an over-reliance on text-based evidence. We present SCITAB, a challenging evaluation dataset consisting of 1.2K expert-verified scientific claims that 1) originate from authentic scientific publications and 2) require compositional reasoning for verification. The claims are paired with evidence-containing scientific tables annotated with labels. Through extensive evaluations, we demonstrate that SCITAB poses a significant challenge to state-of-the-art models, including table-based pretraining models and large language models. All models except GPT-4 achieved performance barely above random guessing. Popular prompting techniques, such as Chain-of-Thought, do not achieve much performance gains on SCITAB. Our analysis uncovers several unique challenges posed by SCITAB, including table grounding, claim ambiguity, and compositional reasoning. Our codes and data are publicly available at https://github.com/XinyuanLu00/SciTab.",
     bibtex_show = {true},
+    selected = {true},
     title = "{SCITAB}: A Challenging Benchmark for Compositional Reasoning and Claim Verification on Scientific Tables",
     author = "Lu*, Xinyuan  and
       Pan*, Liangming  and
