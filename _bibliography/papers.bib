@@ -7,6 +7,7 @@
 @string{emnlpfindings = {Findings of Conference on Empirical Methods in Natural Language Processing (EMNLP)}}
 @string{aclfindings = {Findings of Annual Meeting of the Association for Computational Linguistics (ACL)}}
 @string{icml = {International Conference on Machine Learning (ICML)}}
+@string{tmlr = {Transactions on Machine Learning Research (TMLR)}}
 
 @misc{ma2024mmlongbenchdocbenchmarkinglongcontextdocument,
     abbr = {arXiv},
@@ -95,6 +96,39 @@
     archivePrefix={arXiv},
     primaryClass={cs.CL},
     url={https://arxiv.org/abs/2402.11451}
+}
+
+@misc{yang2023surveydetectionllmsgeneratedcontent,
+    abbr = {arXiv},
+    google_scholar_id = {JV2RwH3_ST0C},
+    website={https://github.com/xianjun-yang/awesome_papers_on_llms_detection},
+    pdf={https://arxiv.org/abs/2310.15654},
+    abstract = "The burgeoning capabilities of advanced large language models (LLMs) such as ChatGPT have led to an increase in synthetic content generation with implications across a variety of sectors, including media, cybersecurity, public discourse, and education. As such, the ability to detect LLMs-generated content has become of paramount importance. We aim to provide a detailed overview of existing detection strategies and benchmarks, scrutinizing their differences and identifying key challenges and prospects in the field, advocating for more adaptable and robust models to enhance detection accuracy. We also posit the necessity for a multi-faceted approach to defend against various attacks to counter the rapidly advancing capabilities of LLMs. To the best of our knowledge, this work is the first comprehensive survey on the detection in the era of LLMs. We hope it will provide a broad understanding of the current landscape of LLMs-generated content detection, offering a guiding reference for researchers and practitioners striving to uphold the integrity of digital information in an era increasingly dominated by synthetic content.",
+    bibtex_show = {true},
+    selected = {true},
+    title={A Survey on Detection of LLMs-Generated Content}, 
+    author={Xianjun Yang and Liangming Pan and Xuandong Zhao and Haifeng Chen and Linda Petzold and William Yang Wang and Wei Cheng},
+    year={2023},
+    eprint={2310.15654},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL},
+    url={https://arxiv.org/abs/2310.15654}
+}
+
+@misc{wang2024factcheckbenchfinegrainedevaluationbenchmark,
+    abbr = {arXiv},
+    google_scholar_id = {hMod-77fHWUC},
+    code={https://github.com/yuxiaw/factcheck-gpt},
+    pdf={https://arxiv.org/abs/2311.09000},
+    abstract = "The increased use of large language models (LLMs) across a variety of real-world applications calls for mechanisms to verify the factual accuracy of their outputs. In this work, we present a holistic end-to-end solution for annotating the factuality of LLM-generated responses, which encompasses a multi-stage annotation scheme designed to yield detailed labels concerning the verifiability and factual inconsistencies found in LLM outputs. We design and build an annotation tool to speed up the labelling procedure and ease the workload of raters. It allows flexible incorporation of automatic results in any stage, e.g. automatically-retrieved evidence. We further construct an open-domain document-level factuality benchmark in three-level granularity: claim, sentence and document. Preliminary experiments show that FacTool, FactScore and Perplexity.ai are struggling to identify false claims with the best F1=0.53.",
+    bibtex_show = {true},
+    title={Factcheck-Bench: Fine-Grained Evaluation Benchmark for Automatic Fact-checkers}, 
+    author={Yuxia Wang and Revanth Gangi Reddy and Zain Muhammad Mujahid and Arnav Arora and Aleksandr Rubashevskii and Jiahui Geng and Osama Mohammed Afzal and Liangming Pan and Nadav Borenstein and Aditya Pillai and Isabelle Augenstein and Iryna Gurevych and Preslav Nakov},
+    year={2024},
+    eprint={2311.09000},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL},
+    url={https://arxiv.org/abs/2311.09000}
 }
 
 @article{pan-etal-2024-automatically,
@@ -256,6 +290,128 @@
     url = "https://arxiv.org/abs/2401.13782"
 }
 
+@article{DBLP:journals/corr/abs-2402-16827,
+  abbr = {TMLR},
+  google_scholar_id={J_g5lzvAfSwC},
+  website={https://github.com/alon-albalak/data-selection-survey},
+  pdf={https://arxiv.org/abs/2402.16827},
+  abstract={A major factor in the recent success of large language models is the use of enormous and ever-growing text datasets for unsupervised pre-training. However, naively training a model on all available data may not be optimal (or feasible), as the quality of available text data can vary. Filtering out data can also decrease the carbon footprint and financial costs of training models by reducing the amount of training required. Data selection methods aim to determine which candidate data points to include in the training dataset and how to appropriately sample from the selected data points. The promise of improved data selection methods has caused the volume of research in the area to rapidly expand. However, because deep learning is mostly driven by empirical evidence and experimentation on large-scale data is expensive, few organizations have the resources for extensive data selection research. Consequently, knowledge of effective data selection practices has become concentrated within a few organizations, many of which do not openly share their findings and methodologies. To narrow this gap in knowledge, we present a comprehensive review of existing literature on data selection methods and related research areas, providing a taxonomy of existing approaches. By describing the current landscape of research, this work aims to accelerate progress in data selection by establishing an entry point for new and established researchers. Additionally, throughout this review we draw attention to noticeable holes in the literature and conclude the paper by proposing promising avenues for future research.},
+  bibtex_show = {true},
+  author       = {Alon Albalak and
+                  Yanai Elazar and
+                  Sang Michael Xie and
+                  Shayne Longpre and
+                  Nathan Lambert and
+                  Xinyi Wang and
+                  Niklas Muennighoff and
+                  Bairu Hou and
+                  Liangming Pan and
+                  Haewon Jeong and
+                  Colin Raffel and
+                  Shiyu Chang and
+                  Tatsunori Hashimoto and
+                  William Yang Wang},
+  title        = {A Survey on Data Selection for Language Models},
+  journal      = tmlr,
+  year         = {2024},
+  url          = {https://doi.org/10.48550/arXiv.2402.16827}
+}
+
+@inproceedings{lu-etal-2023-scitab,
+    abbr = {EMNLP},
+    google_scholar_id={hFOr9nPyWt4C},
+    code={https://github.com/xinyuanlu00/scitab},
+    pdf={https://arxiv.org/abs/2305.13186},
+    video = {https://aclanthology.org/2023.emnlp-main.483.mp4},
+    abstract = "Current scientific fact-checking benchmarks exhibit several shortcomings, such as biases arising from crowd-sourced claims and an over-reliance on text-based evidence. We present SCITAB, a challenging evaluation dataset consisting of 1.2K expert-verified scientific claims that 1) originate from authentic scientific publications and 2) require compositional reasoning for verification. The claims are paired with evidence-containing scientific tables annotated with labels. Through extensive evaluations, we demonstrate that SCITAB poses a significant challenge to state-of-the-art models, including table-based pretraining models and large language models. All models except GPT-4 achieved performance barely above random guessing. Popular prompting techniques, such as Chain-of-Thought, do not achieve much performance gains on SCITAB. Our analysis uncovers several unique challenges posed by SCITAB, including table grounding, claim ambiguity, and compositional reasoning. Our codes and data are publicly available at https://github.com/XinyuanLu00/SciTab.",
+    bibtex_show = {true},
+    selected = {true},
+    title = "{SCITAB}: A Challenging Benchmark for Compositional Reasoning and Claim Verification on Scientific Tables",
+    author = "Lu*, Xinyuan  and
+      Pan*, Liangming  and
+      Liu, Qian  and
+      Nakov, Preslav  and
+      Kan, Min-Yen",
+    booktitle = emnlp,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.483",
+    pages = "7787--7813"
+}
+
+@inproceedings{nathani-etal-2023-maf,
+    abbr = {EMNLP},
+    google_scholar_id={maZDTaKrznsC},
+    code={https://github.com/deepakn97/maf},
+    pdf={https://arxiv.org/abs/2310.12426},
+    video={https://aclanthology.org/2023.emnlp-main.407.mp4},
+    abstract = "Language Models (LMs) have shown impressive performance in various natural language tasks. However, when it comes to natural language reasoning, LMs still face challenges such as hallucination, generating incorrect intermediate reasoning steps, and making mathematical errors. Recent research has focused on enhancing LMs through *self-improvement* using feedback. Nevertheless, existing approaches relying on a single generic feedback source fail to address the diverse error types found in LM-generated reasoning chains. In this work, we propose **Multi-Aspect Feedback**, an iterative refinement framework that integrates multiple feedback modules, including frozen LMs and external tools, each focusing on a specific error category. Our experimental results demonstrate the efficacy of our approach to addressing several errors in the LM-generated reasoning chain and thus improving the overall performance of an LM in several reasoning tasks. We see an improvement of up to 20{\%} in Mathematical Reasoning and up to 18{\%} in Logical Entailment.",
+    bibtex_show = {true},
+    selected = {true},
+    title = "{MAF}: Multi-Aspect Feedback for Improving Reasoning in Large Language Models",
+    author = "Nathani, Deepak  and
+      Wang, David  and
+      Pan, Liangming  and
+      Wang, William",
+    booktitle = emnlp,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.407",
+    pages = "6591--6616"
+}
+
+@inproceedings{xu-etal-2023-instructscore,
+    abbr = {EMNLP},
+    google_scholar_id={ldfaerwXgEUC},
+    code={https://github.com/xu1998hz/sescore3},
+    pdf={https://arxiv.org/abs/2305.14282},
+    video={https://aclanthology.org/2023.emnlp-main.365.mp4},
+    model={https://huggingface.co/xu1998hz/InstructScore},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Automatically evaluating the quality of language generation is critical. Although recent learned metrics show high correlation with human judgement, these metrics do not provide explicit explanation of their verdict, nor associate the scores with defects in the generated text. To address this limitation, we present INSTRUCTSCORE, a fine-grained explainable evaluation metric for text generation. By harnessing both explicit human instruction and the implicit knowledge of GPT-4, we fine-tune a text evaluation metric based on LLaMA, producing both a score for generated text and a human readable diagnostic report. We evaluate INSTRUCTSCORE on a variety of generation tasks, including translation, captioning, data-to-text, and commonsense generation. Experiments show that our 7B model surpasses all other unsupervised metrics, including those based on 175B GPT-3 and GPT-4. Surprisingly, our INSTRUCTSCORE, even without direct supervision from human-rated data, achieves performance levels on par with state-of-the-art metrics like COMET22, which were fine-tuned on human ratings.",
+    title = "{INSTRUCTSCORE}: Towards Explainable Text Generation Evaluation with Automatic Feedback",
+    author = "Xu, Wenda  and
+      Wang, Danqing  and
+      Pan, Liangming  and
+      Song, Zhenqiao  and
+      Freitag, Markus  and
+      Wang, William  and
+      Li, Lei",
+    booktitle = emnlp,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.365",
+    pages = "5967--5994"
+}
+
+@inproceedings{diao-etal-2023-doolittle,
+    abbr = {EMNLP},
+    dataset={https://github.com/shizhediao/Doolittle},
+    pdf={https://aclanthology.org/2023.emnlp-main.809},
+    video={https://aclanthology.org/2023.emnlp-main.809.mp4},
+    bibtex_show = {true},
+    abstract = "Improving the quality of academic writing is a meaningful but challenging task. Conventional methods of language refinement focus on narrow, specific linguistic features within isolated sentences, such as grammatical errors and improper word use. We propose a more general task, Academic Writing Formalization (AWF), to improve the overall quality of formal academic writing at the paragraph level. We formulate this language refinement task as a formal text style transfer task which transfers informal-academic text to formal-academic and contribute a large-scale non-parallel dataset, Doolittle, for this purpose. Concurrently, we apply a method named metric-oriented reinforcement learning (MORL) to two large language models (LLM) where we incorporate different levels of automatic feedback into the training process. Our experiments reveal that existing text transfer models and grammatical error correction models address certain aspects of AWF but still have a significant performance gap compared to human performance. Meanwhile, language models fine-tuned with our MORL method exhibit considerably improved performance, rivaling the latest chatbot ChatGPT, but still have a non-negligible gap compared to the ground truth formal-academic texts in Doolittle.",
+    title = "Doolittle: Benchmarks and Corpora for Academic Writing Formalization",
+    author = "Diao, Shizhe  and
+      Lei, Yongyu  and
+      Pan, Liangming  and
+      Fang, Tianqing  and
+      Zhou, Wangchunshu  and
+      Keh, Sedrick  and
+      Kan, Min-Yen  and
+      Zhang, Tong",
+    booktitle = emnlp,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.809",
+    pages = "13093--13111"
+}
+
 @inproceedings{pan-etal-2023-logic,
     abbr = {EMNLP},
     google_scholar_id={RHpTSmoSYBkC},
@@ -282,7 +438,7 @@
     google_scholar_id={mB3voiENLucC},
     code={https://github.com/MexicanLemonade/LLM-Misinfo-QA},
     pdf={https://arxiv.org/abs/2305.13661},
-    abstract = "While large language models (LLMs) have shown remarkable effectiveness in various NLP tasks, they are still prone to issues such as hallucination, unfaithful reasoning, and toxicity. A promising approach to rectify these flaws is correcting LLMs with feedback, where the LLM itself is prompted or guided with feedback to fix problems in its own output. Techniques leveraging automated feedback{---}either produced by the LLM itself (self-correction) or some external system{---}are of particular interest as they make LLM-based solutions more practical and deployable with minimal human intervention. This paper provides an exhaustive review of the recent advances in correcting LLMs with automated feedback, categorizing them into training-time, generation-time, and post-hoc approaches. We also identify potential challenges and future directions in this emerging field.",
+    abstract = "We investigate the potential misuse of modern Large Language Models (LLMs) for generating credible-sounding misinformation and its subsequent impact on information-intensive applications, particularly Open-Domain Question Answering (ODQA) systems. We establish a threat model and simulate potential misuse scenarios, both unintentional and intentional, to assess the extent to which LLMs can be utilized to produce misinformation. Our study reveals that LLMs can act as effective misinformation generators, leading to a significant degradation (up to 87{\%}) in the performance of ODQA systems. Moreover, we uncover disparities in the attributes associated with persuading humans and machines, presenting an obstacle to current human-centric approaches to combat misinformation. To mitigate the harm caused by LLM-generated misinformation, we propose three defense strategies: misinformation detection, vigilant prompting, and reader ensemble. These approaches have demonstrated promising results, albeit with certain associated costs. Lastly, we discuss the practicality of utilizing LLMs as automatic misinformation generators and provide relevant resources and code to facilitate future research in this area.",
     bibtex_show = {true},
     selected = {true},
     title = "On the Risk of Misinformation Pollution with Large Language Models",
@@ -297,30 +453,44 @@
     address = "Singapore",
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2023.findings-emnlp.97",
-    pages = "1389--1403",
-    abstract = "We investigate the potential misuse of modern Large Language Models (LLMs) for generating credible-sounding misinformation and its subsequent impact on information-intensive applications, particularly Open-Domain Question Answering (ODQA) systems. We establish a threat model and simulate potential misuse scenarios, both unintentional and intentional, to assess the extent to which LLMs can be utilized to produce misinformation. Our study reveals that LLMs can act as effective misinformation generators, leading to a significant degradation (up to 87{\%}) in the performance of ODQA systems. Moreover, we uncover disparities in the attributes associated with persuading humans and machines, presenting an obstacle to current human-centric approaches to combat misinformation. To mitigate the harm caused by LLM-generated misinformation, we propose three defense strategies: misinformation detection, vigilant prompting, and reader ensemble. These approaches have demonstrated promising results, albeit with certain associated costs. Lastly, we discuss the practicality of utilizing LLMs as automatic misinformation generators and provide relevant resources and code to facilitate future research in this area.",
+    pages = "1389--1403"
 }
 
-@inproceedings{lu-etal-2023-scitab,
+@inproceedings{pan-etal-2023-qacheck,
     abbr = {EMNLP},
-    google_scholar_id={hFOr9nPyWt4C},
-    code={https://github.com/xinyuanlu00/scitab},
-    pdf={https://arxiv.org/abs/2305.13186},
-    abstract = "Current scientific fact-checking benchmarks exhibit several shortcomings, such as biases arising from crowd-sourced claims and an over-reliance on text-based evidence. We present SCITAB, a challenging evaluation dataset consisting of 1.2K expert-verified scientific claims that 1) originate from authentic scientific publications and 2) require compositional reasoning for verification. The claims are paired with evidence-containing scientific tables annotated with labels. Through extensive evaluations, we demonstrate that SCITAB poses a significant challenge to state-of-the-art models, including table-based pretraining models and large language models. All models except GPT-4 achieved performance barely above random guessing. Popular prompting techniques, such as Chain-of-Thought, do not achieve much performance gains on SCITAB. Our analysis uncovers several unique challenges posed by SCITAB, including table grounding, claim ambiguity, and compositional reasoning. Our codes and data are publicly available at https://github.com/XinyuanLu00/SciTab.",
+    code={https://github.com/xinyuanlu00/qacheck},
+    pdf={https://arxiv.org/abs/2310.07609},
+    video={https://aclanthology.org/2023.emnlp-demo.23.mp4},
     bibtex_show = {true},
     selected = {true},
-    title = "{SCITAB}: A Challenging Benchmark for Compositional Reasoning and Claim Verification on Scientific Tables",
-    author = "Lu*, Xinyuan  and
-      Pan*, Liangming  and
-      Liu, Qian  and
-      Nakov, Preslav  and
-      Kan, Min-Yen",
-    booktitle = emnlp,
+    abstract = "Fact-checking real-world claims often requires intricate, multi-step reasoning due to the absence of direct evidence to support or refute them. However, existing fact-checking systems often lack transparency in their decision-making, making it challenging for users to comprehend their reasoning process. To address this, we propose the Question-guided Multi-hop Fact-Checking (QACheck) system, which guides the model{'}s reasoning process by asking a series of questions critical for verifying a claim. QACheck has five key modules: a claim verifier, a question generator, a question-answering module, a QA validator, and a reasoner. Users can input a claim into QACheck, which then predicts its veracity and provides a comprehensive report detailing its reasoning process, guided by a sequence of (question, answer) pairs. QACheck also provides the source of evidence supporting each question, fostering a transparent, explainable, and user-friendly fact-checking process.",
+    title = "{QAC}heck: A Demonstration System for Question-Guided Multi-Hop Fact-Checking",
+    author = "Pan, Liangming  and
+      Lu, Xinyuan  and
+      Kan, Min-Yen  and
+      Nakov, Preslav",
+    booktitle = "Conference on Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP Demo)",
     year = "2023",
     address = "Singapore",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.emnlp-main.483",
-    pages = "7787--7813"
+    url = "https://aclanthology.org/2023.emnlp-demo.23",
+    pages = "264--273"
+}
+
+@inproceedings{weissburg-etal-2024-tweets,
+    abbr = {NeurIPS},
+    google_scholar_id={GnPB-g6toBAC},
+    pdf={https://arxiv.org/abs/2312.02406},
+    bibtex_show = {true},
+    selected = {true},
+    award = {Spotlight Paper},
+    abstract = "The data used to pretrain large language models has a decisive impact on a model's downstream performance, which has led to a large body of work on data selection methods that aim to automatically determine the most suitable data to use for pretraining. Existing data selection methods suffer from slow and computationally expensive processes, a problem amplified by the increasing size of models and of pretraining datasets. Data mixing, on the other hand, reduces the complexity of data selection by grouping data points together and determining sampling probabilities across entire groups. However, data mixing proportions are typically fixed before training and therefore cannot adapt to changing training dynamics. To address these limitations, we develop an efficient algorithm for Online Data Mixing (ODM) that combines elements from both data selection and data mixing. Based on multi-armed bandit algorithms, our online approach optimizes the data mixing proportions during training. Remarkably, our method trains a model that reaches the final perplexity of the next best method with 19\% fewer training iterations, and improves performance on the 5-shot MMLU benchmark by 1.9% relative accuracy, while adding negligible wall-clock time during pretraining.",
+    title = "Efficient Online Data Mixing For Language Model Pre-Training",
+    author={Alon Albalak and Liangming Pan and Colin Raffel and William Yang Wang},
+    booktitle = {NeurIPS Workshop on Robustness of Few-shot and Zero-shot Learning in Foundation Models (R0-FoMo@NeurIPS)},
+    year = "2023",
+    address = "New Orleans, USA",
+    url = "https://arxiv.org/abs/2312.02406"
 }
 
 @phdthesis{phdthesis-pan-2022-QG,

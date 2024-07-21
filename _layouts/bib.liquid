@@ -214,7 +214,7 @@
 
     <!-- Links/Buttons -->
     {% comment %} {% assign link_button_style = 'badge blue font-weight-light waves-effect mr-1' %} {% endcomment %}
-    {% assign link_button_style = 'badge grey font-weight-light waves-effect mr-1' %}
+    {% assign link_button_style = 'badge grey waves-effect mr-1' %}
     {% comment %} {% assign link_button_style = 'btn btn-sm z-depth-0' %} {% endcomment %}
     
     <div class="links">
@@ -261,6 +261,9 @@
       {% endif %}
       {% if entry.dataset %}
         <a href="{{ entry.dataset }}" class="{{ link_button_style }}" role="button">Dataset</a>
+      {% endif %}
+      {% if entry.model %}
+        <a href="{{ entry.model }}" class="{{ link_button_style }}" role="button">Model</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}

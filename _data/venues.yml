@@ -21,6 +21,15 @@
 "ICML":
   color: "#0076df"
 
+"NeurIPS":
+  color: "#0076df"
+
+"ICLR":
+  color: "#0076df"
+
+"TMLR":
+  color: "#0076df"
+
 "arXiv":
   # color: "#818589"
   color: "#0076df"
