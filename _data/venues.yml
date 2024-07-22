@@ -18,6 +18,12 @@
 "NAACL":
   color: "#0076df"
 
+"COLING":
+  color: "#0076df"
+
+"AACL / IJCNLP":
+  color: "#0076df"
+
 "ICML":
   color: "#0076df"
 
@@ -25,6 +31,24 @@
   color: "#0076df"
 
 "ICLR":
+  color: "#0076df"
+
+"WWW":
+  color: "#0076df"
+
+"AAAI":
+  color: "#0076df"
+
+"ACM MM":
+  color: "#0076df"
+
+"TMM":
+  color: "#0076df"
+
+"ICMR":
+  color: "#0076df"
+
+"RecSys":
   color: "#0076df"
 
 "TMLR":

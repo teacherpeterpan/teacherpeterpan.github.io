@@ -53,7 +53,7 @@
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
-    <div class="author">
+    <div class="author" style="font-size: 90%;">
       {% assign author_array_size = entry.author_array | size %}
 
       {% assign author_array_limit = author_array_size %}
@@ -201,7 +201,7 @@
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
+    <div class="periodical" style="font-size: 90%;">
       {{ periodical | strip }}
     </div>
     <div class="periodical">
@@ -209,7 +209,7 @@
     </div>
     <!-- Show award if needed -->
     {% if entry.award %}
-      <p class="periodical font-italic" style="color:red;"><i class="fa fa-solid fa-star"></i> {{ entry.award }}</p>
+      <div class="periodical font-italic" style="color:red;"><i class="fa fa-solid fa-star"></i> {{ entry.award }}</div>
     {% endif %}
 
     <!-- Links/Buttons -->
@@ -346,6 +346,11 @@
                 alt="{% google_scholar_citations site.scholar_userid entry.google_scholar_id %} Google Scholar citations"
               >
             </a>
+          {% endif %}
+
+          <!-- Add optional corresponding author notation -->
+          {% if entry.corresponding %}
+            <span class="periodical font-italic" style="font-size: 90%;">(*: Corresponding Author)</span>
           {% endif %}
       {% endif %}
     {% endif %}

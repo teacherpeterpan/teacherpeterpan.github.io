@@ -8,6 +8,18 @@
 @string{aclfindings = {Findings of Annual Meeting of the Association for Computational Linguistics (ACL)}}
 @string{icml = {International Conference on Machine Learning (ICML)}}
 @string{tmlr = {Transactions on Machine Learning Research (TMLR)}}
+@string{ijcnlp-aacl = {International Joint Conference on Natural Language Processing and Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL)}}
+@string{aacl = {Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL)}}
+@string{ijcnlp = {International Joint Conference on Natural Language Processing (IJCNLP)}}
+@string{www = {International World Wide Web Conference (WWW)}}
+@string{aaai = {AAAI Conference on Artificial Intelligence (AAAI)}}
+@string{naacl = {Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)}}
+@string{coling = {International Conference on Computational Linguistics (COLING)}}
+@string{icmr = {International Conference on Multimedia Retrieval (ICMR)}}
+@string{acmmm = {ACM International Conference on Multimedia (ACM MM)}}
+@string{cvpr = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}}
+@string{iccv = {IEEE/CVF International Conference on Computer Vision (ICCV)}}
+@string{tmm = {IEEE Transactions on Multimedia (TMM)}}
 
 @misc{ma2024mmlongbenchdocbenchmarkinglongcontextdocument,
     abbr = {arXiv},
@@ -105,7 +117,6 @@
     pdf={https://arxiv.org/abs/2310.15654},
     abstract = "The burgeoning capabilities of advanced large language models (LLMs) such as ChatGPT have led to an increase in synthetic content generation with implications across a variety of sectors, including media, cybersecurity, public discourse, and education. As such, the ability to detect LLMs-generated content has become of paramount importance. We aim to provide a detailed overview of existing detection strategies and benchmarks, scrutinizing their differences and identifying key challenges and prospects in the field, advocating for more adaptable and robust models to enhance detection accuracy. We also posit the necessity for a multi-faceted approach to defend against various attacks to counter the rapidly advancing capabilities of LLMs. To the best of our knowledge, this work is the first comprehensive survey on the detection in the era of LLMs. We hope it will provide a broad understanding of the current landscape of LLMs-generated content detection, offering a guiding reference for researchers and practitioners striving to uphold the integrity of digital information in an era increasingly dominated by synthetic content.",
     bibtex_show = {true},
-    selected = {true},
     title={A Survey on Detection of LLMs-Generated Content}, 
     author={Xianjun Yang and Liangming Pan and Xuandong Zhao and Haifeng Chen and Linda Petzold and William Yang Wang and Wei Cheng},
     year={2023},
@@ -371,6 +382,7 @@
     model={https://huggingface.co/xu1998hz/InstructScore},
     bibtex_show = {true},
     selected = {true},
+    oral = {true},
     abstract = "Automatically evaluating the quality of language generation is critical. Although recent learned metrics show high correlation with human judgement, these metrics do not provide explicit explanation of their verdict, nor associate the scores with defects in the generated text. To address this limitation, we present INSTRUCTSCORE, a fine-grained explainable evaluation metric for text generation. By harnessing both explicit human instruction and the implicit knowledge of GPT-4, we fine-tune a text evaluation metric based on LLaMA, producing both a score for generated text and a human readable diagnostic report. We evaluate INSTRUCTSCORE on a variety of generation tasks, including translation, captioning, data-to-text, and commonsense generation. Experiments show that our 7B model surpasses all other unsupervised metrics, including those based on 175B GPT-3 and GPT-4. Surprisingly, our INSTRUCTSCORE, even without direct supervision from human-rated data, achieves performance levels on par with state-of-the-art metrics like COMET22, which were fine-tuned on human ratings.",
     title = "{INSTRUCTSCORE}: Towards Explainable Text Generation Evaluation with Automatic Feedback",
     author = "Xu, Wenda  and
@@ -477,6 +489,120 @@
     pages = "264--273"
 }
 
+@inproceedings{pan-etal-2023-fact,
+    abbr = {ACL},
+    google_scholar_id={4JMBOYKVnBMC},
+    code={https://github.com/teacherpeterpan/ProgramFC},
+    pdf={https://arxiv.org/abs/2305.12744},
+    video={https://aclanthology.org/2023.acl-long.386.mp4},
+    poster={poster/programfc_poster.pdf},
+    slides={slides/programfc_slides.pdf},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Fact-checking real-world claims often requires collecting multiple pieces of evidence and applying complex multi-step reasoning. In this paper, we present Program-Guided Fact-Checking (ProgramFC), a novel fact-checking model that decomposes complex claims into simpler sub-tasks that can be solved using a shared library of specialized functions. We first leverage the in-context learning ability of large language models to generate reasoning programs to guide the verification process. Afterward, we execute the program by delegating each sub-task to the corresponding sub-task handler. This process makes our model both explanatory and data-efficient, providing clear explanations of its reasoning process and requiring minimal training data. We evaluate ProgramFC on two challenging fact-checking datasets and show that it outperforms seven fact-checking baselines across different settings of evidence availability, with explicit output programs that benefit human debugging. Our codes and data are publicly available at \url{https://github.com/mbzuai-nlp/ProgramFC}.",
+    title = "Fact-Checking Complex Claims with Program-Guided Reasoning",
+    author = "Pan, Liangming  and
+      Wu, Xiaobao  and
+      Lu, Xinyuan  and
+      Luu, Anh Tuan  and
+      Wang, William Yang  and
+      Kan, Min-Yen  and
+      Nakov, Preslav",
+    booktitle = acl,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.386",
+    pages = "6981--7004"
+}
+
+@inproceedings{do-etal-2023-modeling,
+    abbr = {ACL},
+    code={https://github.com/dxlong2000/sg-cqg},
+    pdf={https://arxiv.org/abs/2305.03088},
+    video={https://aclanthology.org/2023.acl-long.603.mp4},
+    bibtex_show = {true},
+    abstract = "Conversational Question Generation (CQG) is a critical task for machines to assist humans in fulfilling their information needs through conversations. The task is generally cast into two different settings: answer-aware and answer-unaware. While the former facilitates the models by exposing the expected answer, the latter is more realistic and receiving growing attentions recently. What-to-ask and how-to-ask are the two main challenges in the answer-unaware setting. To address the first challenge, existing methods mainly select sequential sentences in context as the rationales. We argue that the conversation generated using such naive heuristics may not be natural enough as in reality, the interlocutors often talk about the relevant contents that are not necessarily sequential in context. Additionally, previous methods decide the type of question to be generated (boolean/span-based) implicitly. Modeling the question type explicitly is crucial as the answer, which hints the models to generate a boolean or span-based question, is unavailable. To this end, we present SG-CQG, a two-stage CQG framework. For the what-to-ask stage, a sentence is selected as the rationale from a semantic graph that we construct, and extract the answer span from it. For the how-to-ask stage, a classifier determines the target answer type of the question via two explicit control signals before generating and filtering. In addition, we propose Conv-Distinct, a novel evaluation metric for CQG, to evaluate the diversity of the generated conversation from a context. Compared with the existing answer-unaware CQG models, the proposed SG-CQG achieves state-of-the-art performance.",
+    title = "Modeling What-to-ask and How-to-ask for Answer-unaware Conversational Question Generation",
+    author = "Do, Xuan Long  and
+      Zou, Bowei  and
+      Joty, Shafiq  and
+      Tai, Tran  and
+      Pan, Liangming  and
+      Chen, Nancy  and
+      Aw, Ai Ti",
+    booktitle = acl,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.603",
+    pages = "10785--10803"
+}
+
+@inproceedings{pan-etal-2023-attacking,
+    abbr = {AACL / IJCNLP},
+    google_scholar_id={L8Ckcad2t8MC},
+    code={https://github.com/teacherpeterpan/contraqa},
+    pdf={https://arxiv.org/abs/2110.07803},
+    slides={slides/contraqa_slides.pdf},
+    award={Area Chair Award (Question Answering Track)},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "With a rise in false, inaccurate, and misleading information in propaganda, news, and social media, real-world Question Answering (QA) systems face the challenges of synthesizing and reasoning over misinformation-polluted contexts to derive correct answers. This urgency gives rise to the need to make QA systems robust to misinformation, a topic previously unexplored. We study the risk of misinformation to QA models by investigating the sensitivity of open-domain QA models to corpus pollution with misinformation documents. We curate both human-written and model-generated false documents that we inject into the evidence corpus of QA models and assess the impact on the performance of these systems. Experiments show that QA models are vulnerable to even small amounts of evidence contamination brought by misinformation, with large absolute performance drops on all models. Misinformation attack brings more threat when fake documents are produced at scale by neural models or the attacker targets hacking specific questions of interest. To defend against such a threat, we discuss the necessity of building a misinformation-aware QA system that integrates question-answering and misinformation detection in a joint fashion.",    title = "Attacking Open-domain Question Answering by Injecting Misinformation",
+    author = "Pan, Liangming  and
+      Chen, Wenhu  and
+      Kan, Min-Yen  and
+      Wang, William Yang",
+    booktitle = ijcnlp-aacl,
+    year = "2023",
+    address = "Nusa Dua, Bali",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.ijcnlp-main.35",
+    pages = "525--539"
+}
+
+@inproceedings{pan-etal-2023-investigating,
+    abbr = {AACL / IJCNLP},
+    code={https://github.com/teacherpeterpan/fact-checking-generalization},
+    pdf={https://arxiv.org/abs/2309.09444},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = {In this paper, we explore zero- and few-shot generalization for fact verification (FV), which aims to generalize the FV model trained on well-resourced domains (e.g., Wikipedia) to low-resourced domains that lack human annotations. To this end, we first construct a benchmark dataset collection which contains 11 FV datasets representing 6 domains. We conduct an empirical analysis of generalization across these FV datasets, finding that current models generalize poorly. Our analysis reveals that several factors affect generalization, including dataset size, length of evidence, and the type of claims. Finally, we show that two directions of work improve generalization: 1) incorporating domain knowledge via pretraining on specialized domains, and 2) automatically generating training data via claim generation.},
+    title = "Investigating Zero- and Few-shot Generalization in Fact Verification",
+    author = "Pan, Liangming  and
+      Zhang, Yunxiang  and
+      Kan, Min-Yen",
+    booktitle = ijcnlp-aacl,
+    year = "2023",
+    address = "Nusa Dua, Bali",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.ijcnlp-main.34",
+    pages = "511--524"
+}
+
+@inproceedings{meng-etal-2023-followupqg,
+    abbr = {AACL / IJCNLP},
+    dataset={https://github.com/vivian-my/followupqg},
+    pdf={https://arxiv.org/abs/2309.05007},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = {Humans ask follow-up questions driven by curiosity, which reflects a creative human cognitive process. We introduce the task of real-world information-seeking follow-up question generation (FQG), which aims to generate follow-up questions seeking a more in-depth understanding of an initial question and answer. We construct FOLLOWUPQG, a dataset of over 3K real-world (initial question, answer, follow-up question) tuples collected from a Reddit forum providing layman-friendly explanations for open-ended questions. In contrast to existing datasets, questions in FOLLOWUPQG use more diverse pragmatic strategies to seek information, and they also show higher-order cognitive skills (such as applying and relating). We evaluate current question generation models on their efficacy for generating follow-up questions, exploring how to generate specific types of follow-up questions based on step-by-step demonstrations. Our results validate FOLLOWUPQG as a challenging benchmark, as model-generated questions are adequate but far from human-raised questions in terms of informativeness and complexity.},
+    title = "{F}ollowup{QG}: Towards Information-Seeking Follow-up Question Generation",
+    author = "Meng, Yan  and
+      Pan, Liangming  and
+      Cao, Yixin  and
+      Kan, Min-Yen",
+    booktitle = ijcnlp-aacl,
+    year = "2023",
+    address = "Nusa Dua, Bali",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.ijcnlp-main.17",
+    pages = "252--271"
+}
+
 @inproceedings{weissburg-etal-2024-tweets,
     abbr = {NeurIPS},
     google_scholar_id={GnPB-g6toBAC},
@@ -491,6 +617,462 @@
     year = "2023",
     address = "New Orleans, USA",
     url = "https://arxiv.org/abs/2312.02406"
+}
+
+@inproceedings{DBLP:conf/www/DiaoKPT0023,
+    abbr = {WWW},
+    pdf = {https://arxiv.org/abs/2302.10143},
+    code = {https://github.com/shizhediao/hashtation},
+    bibtex_show = {true},
+    abstract = {Social media classification tasks (e.g., tweet sentiment analysis, tweet stance detection) are challenging because social media posts are typically short, informal, and ambiguous. Thus, training on tweets is challenging and demands large-scale human-annotated labels, which are time-consuming and costly to obtain. In this paper, we find that providing hashtags to social media tweets can help alleviate this issue because hashtags can enrich short and ambiguous tweets in terms of various information, such as topic, sentiment, and stance. This motivates us to propose a novel Hashtag-guided Tweet Classification model (HashTation), which automatically generates meaningful hashtags for the input tweet to provide useful auxiliary signals for tweet classification. To generate high-quality and insightful hashtags, our hashtag generation model retrieves and encodes the post-level and entity-level information across the whole corpus. Experiments show that HashTation achieves significant improvements on seven low-resource tweet classification tasks, in which only a limited amount of training data is provided, showing that automatically enriching tweets with model-generated hashtags could significantly reduce the demand for large-scale human-labeled data. Further analysis demonstrates that HashTation is able to generate high-quality hashtags that are consistent with the tweets and their labels.},
+    author       = {Shizhe Diao and
+                    Sedrick Scott Keh and
+                    Liangming Pan and
+                    Zhiliang Tian and
+                    Yan Song and
+                    Tong Zhang},
+    title        = {Hashtag-Guided Low-Resource Tweet Classification},
+    booktitle    = www,
+    pages        = {1415--1426},
+    publisher    = {{ACM}},
+    year         = {2023},
+    url          = {https://doi.org/10.1145/3543507.3583194}
+}
+
+@inproceedings{DBLP:conf/aaai/WuDNLPL23,
+    abbr = {AAAI},
+    pdf = {https://arxiv.org/abs/2304.03544},
+    code = {https://github.com/bobxwu/infoctm},
+    bibtex_show = {true},
+    author       = {Xiaobao Wu and
+                    Xinshuai Dong and
+                    Thong Nguyen and
+                    Chaoqun Liu and
+                    Liangming Pan and
+                    Anh Tuan Luu},
+    title        = {InfoCTM: {A} Mutual Information Maximization Perspective of Cross-Lingual
+                    Topic Modeling},
+    booktitle    = aaai,
+    pages        = {13763--13771},
+    publisher    = {{AAAI} Press},
+    year         = {2023},
+    url          = {https://doi.org/10.1609/aaai.v37i11.26612}
+}
+
+@inproceedings{cao-etal-2022-kqa,
+    abbr = {ACL},
+    google_scholar_id={M3ejUd6NZC8C},
+    code={https://github.com/shijx12/kqapro_baselines},
+    pdf={https://arxiv.org/abs/2007.03875},
+    dataset = {https://huggingface.co/datasets/drt/kqa_pro},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "Complex question answering over knowledge base (Complex KBQA) is challenging because it requires various compositional reasoning capabilities, such as multi-hop inference, attribute comparison, set operation, etc. Existing benchmarks have some shortcomings that limit the development of Complex KBQA: 1) they only provide QA pairs without explicit reasoning processes; 2) questions are poor in diversity or scale. To this end, we introduce KQA Pro, a dataset for Complex KBQA including around 120K diverse natural language questions. We introduce a compositional and interpretable programming language KoPL to represent the reasoning process of complex questions. For each question, we provide the corresponding KoPL program and SPARQL query, so that KQA Pro can serve for both KBQA and semantic parsing tasks. Experimental results show that state-of-the-art KBQA methods cannot achieve promising results on KQA Pro as on current datasets, which suggests that KQA Pro is challenging and Complex KBQA requires further research efforts. We also treat KQA Pro as a diagnostic dataset for testing multiple reasoning skills, conduct a thorough evaluation of existing models and discuss further directions for Complex KBQA.",
+    title = "{KQA} Pro: A Dataset with Explicit Compositional Programs for Complex Question Answering over Knowledge Base",
+    author = "Cao, Shulin  and
+      Shi, Jiaxin  and
+      Pan, Liangming  and
+      Nie, Lunyiu  and
+      Xiang, Yutong  and
+      Hou, Lei  and
+      Li, Juanzi  and
+      He, Bin  and
+      Zhang, Hanwang",
+    booktitle = acl,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.422",
+    pages = "6101--6119"
+}
+
+@inproceedings{zhang-etal-2022-interpreting,
+    abbr = {ACL},
+    google_scholar_id={4DMP91E08xMC},
+    pdf={https://arxiv.org/abs/2110.07159},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Modern Natural Language Processing (NLP) models are known to be sensitive to input perturbations and their performance can decrease when applied to real-world, noisy data. However, it is still unclear why models are less robust to some perturbations than others. In this work, we test the hypothesis that the extent to which a model is affected by an unseen textual perturbation (robustness) can be explained by the learnability of the perturbation (defined as how well the model learns to identify the perturbation with a small amount of evidence). We further give a causal justification for the learnability metric. We conduct extensive experiments with four prominent NLP models {---} TextRNN, BERT, RoBERTa and XLNet {---} over eight types of textual perturbations on three datasets. We show that a model which is better at identifying a perturbation (higher learnability) becomes worse at ignoring such a perturbation at test time (lower robustness), providing empirical support for our hypothesis.",
+    title = "Interpreting the Robustness of Neural {NLP} Models to Textual Perturbations",
+    author = "Zhang, Yunxiang  and
+      Pan, Liangming  and
+      Tan, Samson  and
+      Kan, Min-Yen",
+    booktitle = aclfindings,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.findings-acl.315",
+    pages = "3993--4007"
+}
+
+@inproceedings{gong-etal-2022-khanq,
+    abbr = {COLING},
+    pdf={https://aclanthology.org/2022.coling-1.518/},
+    bibtex_show = {true},
+    abstract = "Designing in-depth educational questions is a time-consuming and cognitively demanding task. Therefore, it is intriguing to study how to build Question Generation (QG) models to automate the question creation process. However, existing QG datasets are not suitable for educational question generation because the questions are not real questions asked by humans during learning and can be solved by simply searching for information. To bridge this gap, we present KHANQ, a challenging dataset for educational question generation, containing 1,034 high-quality learner-generated questions seeking an in-depth understanding of the taught online courses in Khan Academy. Each data sample is carefully paraphrased and annotated as a triple of 1) Context: an independent paragraph on which the question is based; 2) Prompt: a text prompt for the question (e.g., the learner{'}s background knowledge); 3) Question: a deep question based on Context and coherent with Prompt. By conducting a human evaluation on the aspects of appropriateness, coverage, coherence, and complexity, we show that state-of-the-art QG models which perform well on shallow question generation datasets have difficulty in generating useful educational questions. This makes KHANQ a challenging testbed for educational question generation.",
+    title = "{KHANQ}: A Dataset for Generating Deep Questions in Education",
+    author = "Gong, Huanli  and
+      Pan, Liangming  and
+      Hu, Hengchang",
+    booktitle = coling,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.518",
+    pages = "5925--5938"
+}
+
+@inproceedings{do-etal-2022-cohs,
+    abbr = {COLING},
+    pdf={https://arxiv.org/abs/2209.06652},
+    code={https://github.com/dxlong2000/cohs-cqg},
+    bibtex_show = {true},
+    abstract = "Conversational question generation (CQG) serves as a vital task for machines to assist humans, such as interactive reading comprehension, through conversations. Compared to traditional single-turn question generation (SQG), CQG is more challenging in the sense that the generated question is required not only to be meaningful, but also to align with the provided conversation. Previous studies mainly focus on how to model the flow and alignment of the conversation, but do not thoroughly study which parts of the context and history are necessary for the model. We believe that shortening the context and history is crucial as it can help the model to optimise more on the conversational alignment property. To this end, we propose CoHS-CQG, a two-stage CQG framework, which adopts a novel CoHS module to shorten the context and history of the input. In particular, it selects the top-p sentences and history turns by calculating the relevance scores of them. Our model achieves state-of-the-art performances on CoQA in both the answer-aware and answer-unaware settings.",
+    title = "{C}o{HS}-{CQG}: Context and History Selection for Conversational Question Generation",
+    author = "Do, Xuan Long  and
+      Zou, Bowei  and
+      Pan, Liangming  and
+      Chen, Nancy F.  and
+      Joty, Shafiq  and
+      Aw, Ai Ti",
+    booktitle = coling,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.48",
+    pages = "580--591"
+}
+
+@inproceedings{zou-etal-2022-automatic,
+    abbr = {NAACL},
+    pdf={https://aclanthology.org/2022.bea-1.10/},
+    video={https://aclanthology.org/2022.bea-1.10.mp4},
+    bibtex_show = {true},
+    abstract = "In field of teaching, true/false questioning is an important educational method for assessing students{'} general understanding of learning materials. Manually creating such questions requires extensive human effort and expert knowledge. Question Generation (QG) technique offers the possibility to automatically generate a large number of questions. However, there is limited work on automatic true/false question generation due to the lack of training data and difficulty finding question-worthy content. In this paper, we propose an unsupervised True/False Question Generation approach (TF-QG) that automatically generates true/false questions from a given passage for reading comprehension test. TF-QG consists of a template-based framework that aims to test the specific knowledge in the passage by leveraging various NLP techniques, and a generative framework to generate more flexible and complicated questions by using a novel masking-and-infilling strategy. Human evaluation shows that our approach can generate high-quality and valuable true/false questions. In addition, simulated testing on the generated questions challenges the state-of-the-art inference models from NLI, QA, and fact verification tasks.",
+    title = "Automatic True/False Question Generation for Educational Purpose",
+    author = "Zou, Bowei  and
+      Li, Pengfei  and
+      Pan, Liangming  and
+      Aw, Ai Ti",
+    booktitle = "NAACL Workshop on Innovative Use of NLP for Building Educational Applications (BEA@NAACL)",
+    year = "2022",
+    address = "Seattle, Washington",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.bea-1.10",
+    pages = "61--70"
+}
+
+@inproceedings{DBLP:conf/mir/WuPCJ22,
+    abbr = {ICMR},
+    abstract = {Cooking video captioning aims to generate the text instructions that describes the cooking procedures presented in the video. Current approaches tend to use large neural models or use more robust feature extractors to increase the expressive ability of features, ignoring the strong correlation between consecutive cooking steps in the video. However, it is intuitive that previous cooking steps can provide clues for the next cooking step. Specially, consecutive cooking steps tend to share the same ingredients. Therefore, accurate ingredients recognition can help to introduce more fine-grained information in captioning. To improve the performance of video procedural caption in cooking video, this paper proposes a framework that introduces ingredient recognition module which uses the copy mechanism to fuse the predicted ingredient information into the generated sentence. Moreover, we integrate the visual information of the previous step into the generation of the current step, and the visual information of the two steps together assist in the generation process. Extensive experiments verify the effectiveness of our propose framework and it achieves the promising performances on both YouCookII and Cooking-COIN datasets.},
+    pdf={https://dl.acm.org/doi/abs/10.1145/3512527.3531388/},
+    bibtex_show = {true},
+    author       = {Jianlong Wu and
+                    Liangming Pan and
+                    Jingjing Chen and
+                    Yu{-}Gang Jiang},
+    title        = {Ingredient-enriched Recipe Generation from Cooking Videos},
+    booktitle    = icmr,
+    pages        = {249--257},
+    publisher    = {{ACM}},
+    year         = {2022},
+    url          = {https://doi.org/10.1145/3512527.3531388}
+}
+
+@inproceedings{he-etal-2022-modeling,
+    abbr = {RecSys},
+    pdf={https://arxiv.org/abs/2209.11471},
+    code={https://github.com/HoldenHu/PDRS},
+    bibtex_show = {true},
+    abstract = "Prerequisites can play a crucial role in users' decision-making yet recommendation systems have not fully utilized such contextual background knowledge. Traditional recommendation systems (RS) mostly enrich user-item interactions where the context consists of static user profiles and item descriptions, ignoring the contextual logic and constraints that underlie them. For example, an RS may recommend an item on the condition that the user has interacted with another item as its prerequisite. Modeling prerequisite context from conceptual side information can overcome this weakness. We propose Prerequisite Driven Recommendation (PDR), a generic context-aware framework where prerequisite context is explicitly modeled to facilitate recommendation. We first design a Prerequisite Knowledge Linking (PKL) algorithm, to curate datasets facilitating PDR research. Employing it, we build a 75k+ high-quality prerequisite concept dataset which spans three domains. We then contribute PDRS, a neural instantiation of PDR. By jointly optimizing both the prerequisite learning and recommendation tasks through multi-layer perceptrons, we find PDRS consistently outperforms baseline models in all three domains, by an average margin of 7.41%. Importantly, PDRS performs especially well in cold-start scenarios with improvements of up to 17.65%.",
+    title = "Modeling and Leveraging Prerequisite Context in Recommendation",
+    author = {Hengchang Hu and
+              Liangming Pan and
+              Yiding Ran and
+              Min{-}Yen Kan},
+    booktitle = "RecSys Workshop on Context-Aware Recommender Systems (CARS@RecSys)",
+    year = "2022",
+    address = "Seattle, WA, USA",
+    url = "https://arxiv.org/abs/2209.11471"
+}
+
+@inproceedings{pan-etal-2021-zero,
+    abbr = {ACL},
+    google_scholar_id={Zph67rFs4hoC},
+    code={https://github.com/teacherpeterpan/Zero-shot-Fact-Verification},
+    pdf={https://arxiv.org/abs/2105.14682},
+    video={https://aclanthology.org/2021.acl-short.61.mp4},
+    slides={slides/qacg_slides.pdf},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "Neural models for automated fact verification have achieved promising results thanks to the availability of large, human-annotated datasets. However, for each new domain that requires fact verification, creating a dataset by manually writing claims and linking them to their supporting evidence is expensive. We develop QACG, a framework for training a robust fact verification model by using automatically generated claims that can be supported, refuted, or unverifiable from evidence from Wikipedia. QACG generates question-answer pairs from the evidence and then converts them into different types of claims. Experiments on the FEVER dataset show that our QACG framework significantly reduces the demand for human-annotated training data. In a zero-shot scenario, QACG improves a RoBERTa model{'}s F1 from 50{\%} to 77{\%}, equivalent in performance to 2K+ manually-curated examples. Our QACG code is publicly available.",
+    title = "Zero-shot Fact Verification by Claim Generation",
+    author = "Pan, Liangming  and
+      Chen, Wenhu  and
+      Xiong, Wenhan  and
+      Kan, Min-Yen  and
+      Wang, William Yang",
+    booktitle = acl,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-short.61",
+    pages = "476--483"
+}
+
+@inproceedings{pan-etal-2021-unsupervised,
+    abbr = {NAACL},
+    google_scholar_id={5nxA0vEk-isC},
+    code={https://github.com/teacherpeterpan/Unsupervised-Multi-hop-QA},
+    pdf={https://arxiv.org/abs/2010.12623},
+    video={https://aclanthology.org/2021.naacl-main.469.mp4},
+    poster={poster/mqa-qg_poster.pdf},
+    slides={slides/mqa-qg_slides.pdf},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "Obtaining training data for multi-hop question answering (QA) is time-consuming and resource-intensive. We explore the possibility to train a well-performed multi-hop QA model without referencing any human-labeled multi-hop question-answer pairs, i.e., unsupervised multi-hop QA. We propose MQA-QG, an unsupervised framework that can generate human-like multi-hop training data from both homogeneous and heterogeneous data sources. MQA-QG generates questions by first selecting/generating relevant information from each data source and then integrating the multiple information to form a multi-hop question. Using only generated training data, we can train a competent multi-hop QA which achieves 61{\%} and 83{\%} of the supervised learning performance for the HybridQA and the HotpotQA dataset, respectively. We also show that pretraining the QA system with the generated data would greatly reduce the demand for human-annotated training data.",
+    title = "Unsupervised Multi-hop Question Answering by Question Generation",
+    author = "Pan, Liangming  and
+      Chen, Wenhu  and
+      Xiong, Wenhan  and
+      Kan, Min-Yen  and
+      Wang, William Yang",
+    booktitle = naacl,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.469",
+    pages = "5866--5880"
+}
+
+@inproceedings{pan-etal-2020-semantic,
+    abbr = {ACL},
+    google_scholar_id={KlAtU1dfN6UC},
+    code={https://github.com/YuxiXie/SG-Deep-Question-Generation},
+    pdf={https://arxiv.org/abs/2004.12704},
+    video={http://slideslive.com/38929018},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "This paper proposes the problem of Deep Question Generation (DQG), which aims to generate complex questions that require reasoning over multiple pieces of information about the input passage. In order to capture the global structure of the document and facilitate reasoning, we propose a novel framework that first constructs a semantic-level graph for the input document and then encodes the semantic graph by introducing an attention-based GGNN (Att-GGNN). Afterward, we fuse the document-level and graph-level representations to perform joint training of content selection and question decoding. On the HotpotQA deep-question centric dataset, our model greatly improves performance over questions requiring reasoning over multiple facts, leading to state-of-the-art performance.",
+    title = "Semantic Graphs for Generating Deep Questions",
+    author = "Pan, Liangming  and
+      Xie, Yuxi  and
+      Feng, Yansong  and
+      Chua, Tat-Seng  and
+      Kan, Min-Yen",
+    booktitle = acl,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.acl-main.135",
+    pages = "1463--1475"
+}
+
+@inproceedings{cao-etal-2020-expertise,
+    abbr = {ACL},
+    google_scholar_id={MXK_kJrjxJIC},
+    dataset={https://srhthu.github.io/expertise-style-transfer/},
+    pdf={https://arxiv.org/abs/2005.00701},
+    video={http://slideslive.com/38929081},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = "The curse of knowledge can impede communication between experts and laymen. We propose a new task of expertise style transfer and contribute a manually annotated dataset with the goal of alleviating such cognitive biases. Solving this task not only simplifies the professional language, but also improves the accuracy and expertise level of laymen descriptions using simple words. This is a challenging task, unaddressed in previous work, as it requires the models to have expert intelligence in order to modify text with a deep understanding of domain knowledge and structures. We establish the benchmark performance of five state-of-the-art models for style transfer and text simplification. The results demonstrate a significant gap between machine and human performance. We also discuss the challenges of automatic evaluation, to provide insights into future research directions.",
+    title = "Expertise Style Transfer: A New Task Towards Better Communication between Experts and Laymen",
+    author = "Cao, Yixin  and
+      Shui, Ruihao  and
+      Pan, Liangming  and
+      Kan, Min-Yen  and
+      Liu, Zhiyuan  and
+      Chua, Tat-Seng",
+    booktitle = acl,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.acl-main.100",
+    pages = "1061--1071",
+}
+
+@inproceedings{liu-etal-2020-exploring,
+    abbr = {EMNLP},
+    google_scholar_id={0EnyYjriUFMC},
+    code={https://github.com/thunlp/explore-and-evaluate},
+    pdf={https://arxiv.org/abs/2010.03249},
+    video={https://slideslive.com/38938987},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Entity alignment (EA) aims at building a unified Knowledge Graph (KG) of rich content by linking the equivalent entities from various KGs. GNN-based EA methods present promising performance by modeling the KG structure defined by relation triples. However, attribute triples can also provide crucial alignment signal but have not been well explored yet. In this paper, we propose to utilize an attributed value encoder and partition the KG into subgraphs to model the various types of attribute triples efficiently. Besides, the performances of current EA methods are overestimated because of the name-bias of existing EA datasets. To make an objective evaluation, we propose a hard experimental setting where we select equivalent entity pairs with very different names as the test set. Under both the regular and hard settings, our method achieves significant improvements (5.10{\%} on average Hits@1 in DBP15k) over 12 baselines in cross-lingual and monolingual datasets. Ablation studies on different subgraphs and a case study about attribute types further demonstrate the effectiveness of our method.",
+    title = "Exploring and Evaluating Attributes, Values, and Structures for Entity Alignment",
+    author = "Liu, Zhiyuan  and
+      Cao, Yixin  and
+      Pan, Liangming  and
+      Li, Juanzi  and
+      Liu, Zhiyuan  and
+      Chua, Tat-Seng",
+    booktitle = emnlp,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.emnlp-main.515",
+    pages = "6355--6364",
+}
+
+@inproceedings{xie-etal-2020-exploring,
+    abbr = {COLING},
+    google_scholar_id={8k81kl-MbHgC},
+    code={https://github.com/YuxiXie/RL-for-Question-Generation},
+    pdf={https://arxiv.org/abs/2011.01102},
+    bibtex_show = {true},
+    selected = {true},
+    corresponding = {true},
+    abstract = "Recent question generation (QG) approaches often utilize the sequence-to-sequence framework (Seq2Seq) to optimize the log likelihood of ground-truth questions using teacher forcing. However, this training objective is inconsistent with actual question quality, which is often reflected by certain global properties such as whether the question can be answered by the document. As such, we directly optimize for QG-specific objectives via reinforcement learning to improve question quality. We design three different rewards that target to improve the fluency, relevance, and answerability of generated questions. We conduct both automatic and human evaluations in addition to thorough analysis to explore the effect of each QG-specific reward. We find that optimizing on question-specific rewards generally leads to better performance in automatic evaluation metrics. However, only the rewards that correlate well with human judgement (e.g., relevance) lead to real improvement in question quality. Optimizing for the others, especially answerability, introduces incorrect bias to the model, resulting in poorer question quality.",
+    title = "Exploring Question-Specific Rewards for Generating Deep Questions",
+    author = "Xie, Yuxi  and
+      Pan*, Liangming  and
+      Wang, Dongzhe  and
+      Kan, Min-Yen  and
+      Feng, Yansong",
+    booktitle = coling,
+    year = "2020",
+    address = "Barcelona, Spain (Online)",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2020.coling-main.228",
+    pages = "2534--2546"
+}
+
+@inproceedings{DBLP:conf/mm/PanCWLNKJC20,
+    abbr = {ACM MM},
+    google_scholar_id={hqOjcs7Dif8C},
+    pdf={https://arxiv.org/abs/2008.09151},
+    bibtex_show = {true},
+    selected = {true},
+    oral = {true},
+    abstract = {Understanding food recipe requires anticipating the implicit causal effects of cooking actions, such that the recipe can be converted into a graph describing the temporal workflow of the recipe. This is a non-trivial task that involves common-sense reasoning. However, existing efforts rely on hand-crafted features to extract the workflow graph from recipes due to the lack of large-scale labeled datasets. Moreover, they fail to utilize the cooking images, which constitute an important part of food recipes. In this paper, we build MM-ReS, the first large-scale dataset for cooking workflow construction, consisting of 9,850 recipes with human-labeled workflow graphs. Cooking steps are multi-modal, featuring both text instructions and cooking images. We then propose a neural encoder-decoder model that utilizes both visual and textual information to construct the cooking workflow, which achieved over 20% performance gain over existing hand-crafted baselines.},
+    author       = {Liangming Pan and
+                    Jingjing Chen and
+                    Jianlong Wu and
+                    Shaoteng Liu and
+                    Chong{-}Wah Ngo and
+                    Min{-}Yen Kan and
+                    Yu{-}Gang Jiang and
+                    Tat{-}Seng Chua},
+    title        = {Multi-modal Cooking Workflow Construction for Food Recipes},
+    booktitle    = acmmm,
+    pages        = {1132--1141},
+    publisher    = {{ACM}},
+    year         = {2020},
+    url          = {https://doi.org/10.1145/3394171.3413765}
+}
+
+@article{DBLP:journals/tmm/PanCLNKC21,
+    abbr = {TMM},
+    pdf = {https://ieeexplore.ieee.org/abstract/document/9288707/},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = {Modeling the structure of culinary recipes is the core of recipe representation learning. Current approaches mostly focus on extracting the workflow graph from recipes based on text descriptions. Process images, which constitute an important part of cooking recipes, has rarely been investigated in recipe structure modeling. We study this recipe structure problem from a multi-modal learning perspective, by proposing a prerequisite tree to represent recipes with cooking images at a step-level granularity. We propose a simple-yet-effective two-stage framework to automatically construct the prerequisite tree for a recipe by (1) utilizing a trained classifier to detect pairwise prerequisite relations that fuses multi-modal features as input; then (2) applying different strategies (greedy method, maximum weight, and beam search) to build the tree structure. Experiments on the MM-ReS dataset demonstrates the advantages of introducing process images for recipe structure modeling. Also, compared with neural methods which require large numbers of training data, we show that our two-stage pipeline can achieve promising results using only 400 labeled prerequisite trees as training data.},
+    author       = {Liangming Pan and
+                    Jingjing Chen and
+                    Shaoteng Liu and
+                    Chong{-}Wah Ngo and
+                    Min{-}Yen Kan and
+                    Tat{-}Seng Chua},
+    title        = {A Hybrid Approach for Detecting Prerequisite Relations in Multi-Modal
+                    Food Recipes},
+    journal      = tmm,
+    volume       = {23},
+    pages        = {4491--4501},
+    year         = {2021},
+    url          = {https://doi.org/10.1109/TMM.2020.3042706}
+}
+
+@inproceedings{DBLP:conf/cvpr/LiuCPNCJ20,
+    abbr = {CVPR},
+    google_scholar_id = {Se3iqnhoufwC},
+    code = {https://github.com/ShaoTengLiu/Hyperbolic_ZSL},
+    pdf = {https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_Hyperbolic_Visual_Embedding_Learning_for_Zero-Shot_Recognition_CVPR_2020_paper.html},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = {This paper proposes a Hyperbolic Visual Embedding Learning Network for zero-shot recognition. The network learns image embeddings in hyperbolic space, which is capable of preserving the hierarchical structure of semantic classes in low dimensions. Comparing with existing zero-shot learning approaches, the network is more robust because the embedding feature in hyperbolic space better represents class hierarchy and thereby avoid misleading resulted from unrelated siblings. Our network outperforms exiting baselines under hierarchical evaluation with an extremely challenging setting, i.e., learning only from 1,000 categories to recognize 20,841 unseen categories. While under flat evaluation, it has competitive performance as state-of-the-art methods but with five times lower embedding dimensions.},
+    author       = {Shaoteng Liu and
+                    Jingjing Chen and
+                    Liangming Pan and
+                    Chong{-}Wah Ngo and
+                    Tat{-}Seng Chua and
+                    Yu{-}Gang Jiang},
+    title        = {Hyperbolic Visual Embedding Learning for Zero-Shot Recognition},
+    booktitle    = cvpr,
+    pages        = {9270--9278},
+    publisher    = {Computer Vision Foundation / {IEEE}},
+    year         = {2020},
+    url          = {https://openaccess.thecvf.com/content\_CVPR\_2020/html/Liu\_Hyperbolic\_Visual\_Embedding\_Learning\_for\_Zero-Shot\_Recognition\_CVPR\_2020\_paper.html}
+}
+
+@inproceedings{DBLP:conf/aaai/ChenPWWNC20,
+    abbr = {AAAI},
+    google_scholar_id = {_FxGoFyzp5QC},
+    pdf = {https://ojs.aaai.org/index.php/AAAI/article/view/6626},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = {Recognizing ingredients for a given dish image is at the core of automatic dietary assessment, attracting increasing attention from both industry and academia. Nevertheless, the task is challenging due to the difficulty of collecting and labeling sufficient training data. On one hand, there are hundred thousands of food ingredients in the world, ranging from the common to rare. Collecting training samples for all of the ingredient categories is difficult. On the other hand, as the ingredient appearances exhibit huge visual variance during the food preparation, it requires to collect the training samples under different cooking and cutting methods for robust recognition. Since obtaining sufficient fully annotated training data is not easy, a more practical way of scaling up the recognition is to develop models that are capable of recognizing unseen ingredients. Therefore, in this paper, we target the problem of ingredient recognition with zero training samples. More specifically, we introduce multi-relational GCN (graph convolutional network) that integrates ingredient hierarchy, attribute as well as co-occurrence for zero-shot ingredient recognition. Extensive experiments on both Chinese and Japanese food datasets are performed to demonstrate the superior performance of multi-relational GCN and shed light on zero-shot ingredients recognition.},
+    author       = {Jingjing Chen and
+                    Liangming Pan and
+                    Zhipeng Wei and
+                    Xiang Wang and
+                    Chong{-}Wah Ngo and
+                    Tat{-}Seng Chua},
+    title        = {Zero-Shot Ingredient Recognition by Multi-Relational Graph Convolutional
+                    Network},
+    booktitle    = aaai,
+    pages        = {10542--10550},
+    publisher    = {{AAAI} Press},
+    year         = {2020},
+    url          = {https://doi.org/10.1609/aaai.v34i07.6626}
+}
+
+@inproceedings{pan-etal-2017-prerequisite,
+    abbr = {ACL},
+    google_scholar_id = {2osOgNQ5qMEC},
+    pdf = {https://aclanthology.org/P17-1133/},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "What prerequisite knowledge should students achieve a level of mastery before moving forward to learn subsequent coursewares? We study the extent to which the prerequisite relation between knowledge concepts in Massive Open Online Courses (MOOCs) can be inferred automatically. In particular, what kinds of information can be leverage to uncover the potential prerequisite relation between knowledge concepts. We first propose a representation learning-based method for learning latent representations of course concepts, and then investigate how different features capture the prerequisite relations between concepts. Our experiments on three datasets form Coursera show that the proposed method achieves significant improvements (+5.9-48.0{\%} by F1-score) comparing with existing methods.",
+    title = "Prerequisite Relation Learning for Concepts in {MOOC}s",
+    author = "Pan, Liangming  and
+      Li, Chengjiang  and
+      Li, Juanzi  and
+      Tang, Jie",
+    booktitle = acl,
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P17-1133",
+    pages = "1447--1456"
+}
+
+@inproceedings{pan-etal-2017-course,
+    abbr = {AACL / IJCNLP},
+    google_scholar_id = {zYLM7Y9cAGgC},
+    pdf = {https://aclanthology.org/I17-1088/},
+    bibtex_show = {true},
+    selected = {true},
+    abstract = "Massive Open Online Courses (MOOCs), offering a new way to study online, are revolutionizing education. One challenging issue in MOOCs is how to design effective and fine-grained course concepts such that students with different backgrounds can grasp the essence of the course. In this paper, we conduct a systematic investigation of the problem of course concept extraction for MOOCs. We propose to learn latent representations for candidate concepts via an embedding-based method. Moreover, we develop a graph-based propagation algorithm to rank the candidate concepts based on the learned representations. We evaluate the proposed method using different courses from XuetangX and Coursera. Experimental results show that our method significantly outperforms all the alternative methods (+0.013-0.318 in terms of R-precision; p{\textless}{\textless}0.01, t-test).",
+    title = "Course Concept Extraction in {MOOC}s via Embedding-Based Graph Propagation",
+    author = "Pan, Liangming  and
+      Wang, Xiaochen  and
+      Li, Chengjiang  and
+      Li, Juanzi  and
+      Tang, Jie",
+    booktitle = ijcnlp,
+    year = "2017",
+    address = "Taipei, Taiwan",
+    publisher = "Asian Federation of Natural Language Processing",
+    url = "https://aclanthology.org/I17-1088",
+    pages = "875--884"
 }
 
 @phdthesis{phdthesis-pan-2022-QG,
